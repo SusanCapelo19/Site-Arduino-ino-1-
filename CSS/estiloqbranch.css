@@ -1,0 +1,192 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+  background-image: url('../Assets/backgroundqbranch.png');
+}
+
+/* === Introdução do Q Branch === */
+.intro-qbranch {
+  height: 100vh;
+  background-image: url('../Assets/capa_intro_qbrach.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.intro-qbranch h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.botao-iniciar {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.botao-iniciar:hover {
+  background-color: #b00710;
+}
+
+/* === Conteúdo da Main === */
+.componentes {
+    margin-top: 20px;
+    margin-left: 30px;
+    text-align: justify;
+    color: #000000;
+}
+.carrossel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.carrossel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.carrossel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.carrossel-btn:hover {
+  transform: scale(1.2);
+}
+
+.item {
+  min-width: 400px;
+  min-height: 300px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #777676;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 50%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.botao-mais {
+  margin-top: 8px;
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.info-extra {
+  margin-top: 10px;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.grid-container1 {
+  padding: 30px 20px;
+}
+
+.grid-container1 h2 {
+  margin-bottom: 20px;
+  color: #000000;
+  text-align: justify;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.item1 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #777676;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 300px; 
+  text-align: center;
+}
+
+.item1 img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.item1 h3 {
+  margin: 10px 0 5px 0;
+}
+
+.item1 p {
+  margin-bottom: 15px;
+}
+
+.botao-comprar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #181717;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  
+}
+
+.botao-comprar:hover {
+  background-color: #494949;
+  transform: scale(1.1);
+}

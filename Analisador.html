@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Frequência de Áudio</title>
+    <link rel="stylesheet" href="CSS/estilogeral.css">
+    <link rel="stylesheet" href="CSS/estilohome.css"/>
+</head>
+<body>
+
+  <div class="intro-home">
+    <h2>Sua missão, se você decidir aceitá-la</h2>
+   <button id="start-audio" class="botao-iniciar">Entrar na Missão</button>
+  </div>
+
+  <header style="display: none;">
+
+    <div class="gif-grid">
+        <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+        <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+        <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+    </div>
+    
+    <div class="titulo-central">
+        <h1>Analisador de Frequência de Áudio</h1>         
+        <nav class="menu">
+      <ul>
+        <li><a href="Analisador.html">A Missão</a></li>
+        <li><a href="QBranch.html">Q Branch</a></li>
+        <li><a href="TheMatrix.html">The Matrix</a></li>
+        <li><a href="Viucomosefaz.html">Viu, como se faz</a></li>
+        <li><a href="Aestradaateaqui.html">A estrada até aqui</a></li>
+        <li><a href="ATrupe.html">A Trupe</a></li>
+      </ul>
+    </nav>
+    </div>
+
+    <div class="controle-audio">
+      <button id="pause-audio" class="botao-pausar">PAUSAR MÚSICA</button>
+    </div>
+    
+  </header>
+
+  <audio id="bg-music" loop>
+    <source src="Assets/audio_tema_missao_impossivel.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio embutido.
+  </audio>
+
+  <main id="conteudo" style="display: none;">
+
+    <section class="descricao">
+      <h2><b>Descrição do Projeto</b></h2>
+      <img src="Assets/Arduino UNO.jpeg" alt="imagem provisória" class="imagem-home">
+      <p>Este projeto foi desenvolvido como parte das atividades práticas da disciplina de Sistemas Digitais, no curso de Análise e Desenvolvimento de Sistemas. A proposta da disciplina é proporcionar aos estudantes uma vivência concreta com o uso do Arduino, promovendo a integração entre teoria e prática por meio da criação de artefatos eletrônicos funcionais.</p>
+      <p>A motivação para a escolha do nosso projeto surgiu do interesse pessoal de um dos integrantes do grupo por música e instrumentos musicais. A partir disso, decidimos explorar a interseção entre áudio e tecnologia, criando um analisador de frequência de áudio que captasse sons do ambiente, interpretasse suas frequências e as exibisse de forma visual. Essa proposta nos pareceu não só tecnicamente desafiadora, mas também criativa e alinhada com o espírito experimental da disciplina.</p>
+      <p>O objetivo do projeto é construir um sistema funcional que, por meio do Arduino, consiga captar sinais sonoros, processar suas frequências e exibir os dados de maneira clara e interativa através de uma tela de LEDs. Com isso, buscamos compreender melhor conceitos como sinais analógicos e digitais, leitura de sensores, programação embarcada e aplicação de transformadas de frequência.</p>
+      <p>O projeto se insere na área da computação física e tem aplicação potencial em áreas como educação, música, acessibilidade e engenharia. No âmbito acadêmico, este trabalho nos permite aplicar conhecimentos de eletrônica digital, lógica e programação em um produto real, além de fomentar o trabalho em equipe, a criatividade e a resolução de problemas práticos.</p>
+    </section>
+
+    <section class="palavras-chave">
+      <h3>Palavras-chave</h3>
+      <p>Arduino | Analisador | Frequência | Áudio | Projeto Universitário</p>
+        
+      </ul>
+    </section>
+
+    <section class="download">
+      <a href="Assets/projeto.zip" download class="botao-download">
+        <img src="Assets/iconedownload.webp" alt="Ícone de download" class="icone-download">
+        <span>Download do Projeto</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="rodape" style="display: none;">
+    <p>Equipe 11 | Arduino ino | Analisador de Frequência de Áudio | SD-ADS Reglar | Cesar School | 2025</p>
+  </footer>
+
+  <script>
+
+    document.getElementById("start-audio").addEventListener("click", () => {
+      const audio = document.getElementById("bg-music");
+      
+      audio.play()
+        .then(() => {
+      document.querySelector(".intro-home").style.display = "none";
+      document.querySelector("header").style.display = "block";
+      document.getElementById("conteudo").style.display = "block";
+      document.querySelector("footer.rodape").style.display = "block";
+      })
+       .catch((error) => {
+          console.log("Erro ao iniciar o áudio:", error);
+          alert("Clique para permitir o som!");
+      });
+    });
+
+  document.getElementById("pause-audio").addEventListener("click", () => {
+  const audio = document.getElementById("bg-music");
+  const botao = document.getElementById("pause-audio");
+
+  if (audio.paused) {
+    audio.play();
+    botao.textContent = "PAUSAR MÚSICA";
+  } else {
+    audio.pause();
+    botao.textContent = "RETOMAR MÚSICA";
+  }
+});
+
+  </script>
+</body>
+</html>

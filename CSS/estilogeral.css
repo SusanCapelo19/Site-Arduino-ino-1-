@@ -1,0 +1,103 @@
+/* === Reset de estilos e utilidades === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Animações === */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(229, 9, 20, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+}
+
+/* === Header e navegação === */
+header {
+  background-color: black;
+  color: white;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+  height: 150px;
+}
+
+.gif-grid img {
+  width: 60%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.titulo-central {
+  text-align: center;
+  padding: 0;
+}
+
+.titulo-central h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+  background-color: #252525;
+}
+
+/* === Controle de áudio === */
+.controle-audio {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.botao-pausar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.botao-pausar:hover {
+  background-color: #202020;
+}
+
+/* === Rodapé === */
+footer.rodape {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+}

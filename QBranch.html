@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q Branch</title>
+  <link rel="stylesheet" href="CSS/estilogeral.css"/>
+  <link rel="stylesheet" href="CSS/estiloqbranch.css">
+</head>
+<body>
+
+  <div class="intro-qbranch">
+    <h2>Espero que isso seja suficiente</h2>
+    <button id="start-audio" class="botao-iniciar">Vamos Começar</button>
+  </div>
+
+  <header style="display: none;">
+    <div class="gif-grid">
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+    </div>
+
+    <div class="titulo-central">
+      <h1>Q Branch - itens necessarios para missão</h1>
+      <nav class="menu">
+        <ul>
+          <li><a href="Analisador.html">A Missão</a></li>
+          <li><a href="QBranch.html">Q Branch</a></li>
+          <li><a href="TheMatrix.html">The Matrix</a></li>
+          <li><a href="Viucomosefaz.html">Viu, como se faz</a></li>
+          <li><a href="Aestradaateaqui.html">A estrada até aqui</a></li>
+          <li><a href="ATrupe.html">A Trupe</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="controle-audio">
+      <button id="pause-audio" class="botao-pausar">PAUSAR MÚSICA</button>
+    </div>
+
+  </header>
+
+  <audio id="bg-music" loop>
+    <source src="Assets/audio_tema_007.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio embutido.
+  </audio>
+
+  <main id="conteudo" style="display: none;">
+    
+    <section class="carrossel-container">
+      <h2 class="componentes"><b>Componentes Utilizados</b></h2>
+
+      <div class="carrossel-wrapper">
+        <button class="carrossel-btn left" onclick="scrollCarrossel(-1)">&#10094;</button>
+
+        <div class="carrossel" id="carrosselComponentes">
+          <div class="item">
+            <img src="Assets/arduino uno.png" alt="placa de arduino Uno Blackboard (R3)">
+            <h3>Arduino Uno Blackboard (R3)</h3>
+            <p>Quantidade: 1</p>
+            <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+            <div class="info-extra" style="display: none;">
+              <p>Placa de desenvolvimento baseada no microcontrolador ATmega328P, compatível com a plataforma Arduino. Possui 14 pinos digitais de I/O (6 PWM), 6 entradas analógicas, interface USB, cristal de 16 MHz, botão de reset e conectores de alimentação.</p>
+              <p><b>Código de Referência:</b>A000066</p>
+              <a href="https://www.robocore.net/placa-robocore/arduino-blackboard?srsltid=AfmBOooCExJbee5nOYv1dZwY-GVq0l7kzBfNIAWxtQen8jPuncIKp0eUGo8" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de compra" class="botao-comprar">Onde encontrar</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Assets/módulo de matriz de LED 128x32.jpg" alt="Módulo de LED MAX7219 32x8">
+            <h3>Módulo de LED MAX7219 32x8</h3>
+            <p>Quantidade: 1</p>
+            <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+            <div class="info-extra" style="display: none;">
+              <p>Display de matriz de LED controlado pelo chip MAX7219, capaz de controlar até 64 LEDs (8x8). O modelo 32x8 é uma junção de 4 matrizes 8x8, permitindo maior espaço visual. Comunicação via SPI com o Arduino.</p>
+              <p><b>Código de Referência:</b>MAX7219 Dot Matrix Module 4-in-1 32x8</p>
+              <a href="https://shopee.com.br/product/351550302/19897925762?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBMzI3NFczaVQ1TUlla0J0Sk04V2xXMzNRejZ2K3ZSdkc5NEVtWHc0WU5UUlhWSHNMZjBwM2cwdTBWSTFPRDd1d2lsbHdLWWdXWXdneXhDY0xVeDFSUTIvSE9HNlhiZVBFTFRIYlh5WTV3TjlnPT0" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de compra" class="botao-comprar">Onde encontrar</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Assets/módulo microfone max4466.jpg" alt="Módulo de Microfone MAX4466 ">
+            <h3>Módulo de Microfone MAX4466 </h3>
+            <p>Quantidade: 1</p>
+            <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+            <div class="info-extra" style="display: none;">
+              <p>Microfone eletreto acoplado ao amplificador operacional MAX4466, ideal para capturar sons com boa sensibilidade e pouco ruído. Possui potenciômetro para ajuste de ganho.</p>
+              <p><b>Código de Referência:</b>MAX4466 Electret Microphone Amplifier Module</p>
+              <a href="https://shopee.com.br/product/375037417/19169049577?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBM2J5bmo0RmhiSHNXMVA0NHpwcnZyL3Y4YlpUdFFSdnZrRXlXQ2lFT3dPSDZmM2xkVHloY2dWVmQ2ZFdVcjRVeEl4VVBqY29YTHZDQ2ZWdmplRzgwSEc5WXJnbzFsazFVUEhLc3l5ZnZRVk93PT0&gad_source=4&gad_campaignid=20824904858&gbraid=0AAAAACoEtRlUt3Q0MCQ5cEmM9g-E2Zh5Q&gclid=Cj0KCQjw_8rBBhCFARIsAJrc9yDH57X_JtX24eE7ZKYYwbtIthE9z23P2Nw-OnJu9bB1XcqMMYoO9cYaAoV0EALw_wcB" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de compra" class="botao-comprar">Onde encontrar</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Assets/protoboard.webp" alt="Breadboard (Protoboard)">
+            <h3>Breadboard (Protoboard)</h3>
+            <p>Quantidade: 1</p>
+            <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+            <div class="info-extra" style="display: none;">
+              <p>Placa de ensaio usada para montar circuitos eletrônicos temporariamente, sem a necessidade de solda. Permite conexões rápidas e reutilizáveis entre os componentes.</p>
+              <p><b>Código de Referência:</b></p>
+              <a href="https://shopee.com.br/product/329514049/11493740562?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBM2VtVXFRTzErZUllMVRPN1U2NEhKRFBReWJma2UxL2Y1MjdkdHBrNFJpTVgwZnJGVURGTWJFSkJ5a0cwU2IrWXBwUFc4RXJvbm42UHEyVXo2ZFdXN3RNeno2QWJNN052WjVTRDdMeTRqc0xBPT0" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de compra" class="botao-comprar">Onde encontrar</a>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Assets/jumpers.jpg" alt="Jumpers (Cabos de Conexão)">
+            <h3>Jumpers (Cabos de Conexão)</h3>
+            <p>Quantidade: 8</p>
+            <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+            <div class="info-extra" style="display: none;">
+              <p>PCabos flexíveis usados para realizar conexões entre os pinos dos componentes, Arduino e breadboard. Existem versões macho-macho, macho-fêmea e fêmea-fêmea.</p>
+              <p><b>Código de Referência:</b>Jumper Wire Kit</p>
+              <a href="https://produto.mercadolivre.com.br/MLB-1961317154-kit-cabo-jumper-mxm-mxf-fxf-120-unidades-20cm-arduino-_JM?matt_tool=49601181&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354496&matt_ad_group_id=173090612396&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882733433&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=279130408&matt_product_id=MLB1961317154&matt_product_partition_id=2394343693581&matt_target_id=aud-1966981570049:pla-2394343693581&cq_src=google_ads&cq_cmp=22090354496&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=4&gad_campaignid=22090354496&gbraid=0AAAAAD93qcBU29xunoyj9F5a38dN390X7&gclid=Cj0KCQjw_8rBBhCFARIsAJrc9yCBeaImmYYVVnnJL7Bzon6MxTjk5P_PTIZdkT5ozLaiv8ZOilHvtSYaAmYtEALw_wcB" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de compra" class="botao-comprar">Onde encontrar</a>
+            </div>
+          </div>           
+          
+        </div>
+      <button class="carrossel-btn right" onclick="scrollCarrossel(1)">&#10095;</button>
+    </section>
+
+    <section class="grid-container1">
+      <h2><b>Plataformas e Aplicativos</b></h2>
+      <div class="grid1">
+        <div class="item1">
+          <img src="Assets/arduino IDE.jpg" alt="Logo do Arduino IDE">
+          <h3>Arduino IDE</h3>          
+          <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+          <div class="info-extra" style="display: none;">
+            <p>Ambiente de desenvolvimento usado para programar placas Arduino. Permite escrever, compilar e enviar código para o hardware.</p>
+            <p><b>Versão:</b>2.3.6 (2025)</p>  
+          </div>
+          <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de download" class="botao-comprar">Onde encontrar</a>
+        </div>
+      
+        <div class="item1">
+          <img src="Assets/MD_MAX.png" alt="Logo da biblioteca MD_MAX">
+          <h3>Biblioteca MD_MAX72XX</h3>          
+          <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+          <div class="info-extra" style="display: none;">
+            <p>Biblioteca que facilita a comunicação e o controle de módulos de matriz de LED</p>
+            <p><b>Versão:</b>3.5.1 (2023)</p>
+            </div>
+          <a href="https://www.arduinolibraries.info/libraries/md_max72-xx?utm_source" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de dowload" class="botao-comprar">Onde encontrar</a>
+        </div>
+            
+        <div class="item1">
+          <img src="Assets/fft.png" alt="imagem representativa de FFT">
+          <h3>Biblioteca arduinoFFT</h3>          
+          <button class="botao-mais" onclick="toggleInfo(this)">+</button>
+          <div class="info-extra" style="display: none;">
+            <p>Biblioteca para Arduino que implementa a Transformada Rápida de Fourier (FFT - Fast Fourier Transform). Ela permite transformar um sinal no domínio do tempo (como o captado por um microfone) para o domínio da frequência.</p>
+            <p><b>Versão:</b>3.5 (2019)</p>
+          </div>
+          <a href="https://www.arduinolibraries.info/libraries/arduino-fft" target="_blank" rel="noopener noreferrer" aria-label="botão que direciona ao link de dowload"  class="botao-comprar">Onde encontrar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape" style="display: none;">
+    Equipe 11 - Arduino ino - Analisador de Frequência de Áudio - 2025
+  </footer>
+
+  <script>
+
+    document.getElementById("start-audio").addEventListener("click", function () {
+      const audio = document.getElementById("bg-music");
+      
+      audio.play()
+        .then(() => {
+          document.querySelector(".intro-qbranch").style.display = "none";
+          document.querySelector("header").style.display = "block";
+          document.getElementById("conteudo").style.display = "block";
+          document.querySelector("footer.rodape").style.display = "block";
+        })
+        .catch((error) => {
+          console.log("Erro ao iniciar o áudio:", error);
+          alert("Clique para permitir o som!");
+        });
+    });
+
+    document.getElementById("pause-audio").addEventListener("click", () => {
+    const audio = document.getElementById("bg-music");
+    const botao = document.getElementById("pause-audio");
+
+    if (audio.paused) {
+      audio.play();
+      botao.textContent = "PAUSAR MÚSICA";
+    } else {
+      audio.pause();
+      botao.textContent = "RETOMAR MÚSICA";
+    }
+  });
+
+    function scrollCarrossel(direction) {
+    const carrossel = document.getElementById('carrosselComponentes');
+    const scrollAmount = 300; 
+
+    carrossel.scrollBy({
+      left: scrollAmount * direction,
+      behavior: 'smooth'
+    });
+  }
+
+  function toggleInfo(botao) {
+  const info = botao.nextElementSibling;
+  if (info.style.display === "none" || info.style.display === "") {
+    info.style.display = "block";
+    botao.textContent = "-";
+  } else {
+    info.style.display = "none";
+    botao.textContent = "+";
+  }
+}
+
+  </script>
+</body>
+</html>

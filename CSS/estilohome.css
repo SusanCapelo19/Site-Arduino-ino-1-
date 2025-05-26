@@ -1,0 +1,114 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../Assets/backgroundhome.webp') center center / cover no-repeat;
+  opacity: 0.3; 
+  z-index: -1; 
+  pointer-events: none;
+}
+
+/* Introdução da Home */
+.intro-home {
+  height: 100vh;
+  background: radial-gradient(#222, #000);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.intro-home h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.botao-iniciar {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.botao-iniciar:hover {
+  background-color: #b00710;
+}
+
+/* Conteúdo da Main */
+#conteudo {
+  padding: 10px 20px;
+}
+
+.descricao h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.descricao p {
+  font-size: 1.2rem;
+  text-align: justify;
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px;
+}
+
+.imagem-home {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de Download */
+.download {
+  position: relative;
+  min-height: 100px;
+}
+
+.botao-download {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e50914;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin: 0px auto;
+  transition: background-color 0.3s;
+  animation: pulse 2s infinite;
+  gap: 10px;
+}
+
+.botao-download:hover {
+  background-color: #b00710;
+}
+
+.icone-download {
+  width: 24px;
+  height: 24px;
+}
