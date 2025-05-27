@@ -1,0 +1,211 @@
+JARDEL: THE MATRIX
+
+HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Matrix</title>
+  <link rel="stylesheet" href="CSS/estilogeral.css">
+  <link rel="stylesheet" href="CSS/estilothematrix.css">
+</head>
+<body>
+
+
+  <div class="intro-matrix">
+        <video autoplay muted>
+            <source src="Assets/capa_intro_matriz.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+        </video>
+  </div>
+
+
+  <div class="final-msg">
+    <h2>Pronto para conhecer a Matrix?</h2>
+    <button id="start-audio" class="botao-iniciar">Tomar pílula vermelha</button>
+  </div>
+
+
+  <header style="display: none;">
+    <div class="gif-grid">
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+      <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+    </div>
+
+
+    <div class="titulo-central">
+      <h1>O Código revelado</h1>
+      <nav class="menu">
+        <ul>
+          <li><a href="Analisador.html">A Missão</a></li>
+          <li><a href="QBranch.html">Q Branch</a></li>
+          <li><a href="TheMatrix.html">The Matrix</a></li>
+          <li><a href="Viucomosefaz.html">Viu, como se faz</a></li>
+          <li><a href="Aestradaateaqui.html">A estrada até aqui</a></li>
+          <li><a href="ATrupe.html">A Trupe</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="controle-audio">
+      <button id="pause-audio" class="botao-pausar">PAUSAR MÚSICA</button>
+  </div>
+
+
+  </header>
+
+
+  <audio id="bg-music" loop>
+    <source src="Assets/audio_tema_matrix.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio embutido.
+  </audio>
+
+
+  <main>
+    <div id="conteudo" style="display: none;">
+
+
+      <section class="descricao">
+        <h1>Trechos essenciais do código</h1>
+
+
+          <div class="bloco-codigo">
+           <h2>Importação de bibliotecas</h2>
+            <pre><code>&lt;#include arduinoFFT.h&gt;
+&lt;#include MD_MAX72xx.h&gt;
+&lt;#include SPI.h&gt;</code></pre>
+            <p>Essas bibliotecas são responsáveis por:</p>
+            <ul>
+              <li><code>arduinoFFT</code>: análise da frequência do sinal.</li>
+              <li><code>MD_MAX72xx</code>: controle do display de LEDs.</li>
+              <li><code>SPI</code>: comunicação entre o Arduino e o display.</li>
+            </ul>
+          </div>
+       
+          <div class="bloco-codigo">
+           <h2>Filtro passa-altas</h2>
+            <pre><code>float highPass(float entrada, float cutoff, float taxaAmostragem) {
+              float RC = 1.0 / (2.0 * 3.1416 * cutoff);
+              float dt = 1.0 / taxaAmostragem;
+              float alfa = RC / (RC + dt);
+              float saida = alfa * (saidaAnterior + (entrada - entradaAnterior));
+              entradaAnterior = entrada;
+              saidaAnterior = saida;
+              return saida;
+              }
+            </code></pre>
+           <p>Remove ruídos de baixa frequência, como ruídos do ambiente ou ruído DC.</p>
+          </div>
+       
+        <div class="bloco-codigo">
+         <h2>Leitura e preparação do sinal</h2>
+          <pre><code>for (int i = 0; i &lt; AMOSTRAS; i++) {
+            while (micros() - ultimaMedicao &lt; tempoAmostragem);
+            ultimaMedicao = micros();
+            int sinalAnalogico = analogRead(A0);
+            float sinalCentralizado = sinalAnalogico - 509.0;
+            float sinalFiltrado = highPass((sinalCentralizado / 8.0), 100.0, 10000.0);
+            vReal[i] = sinalFiltrado;
+            vImag[i] = 0;
+            }
+          </code></pre>
+          <p>Captura os dados do microfone e aplica o filtro antes da FFT.</p>
+        </div>
+       
+        <div class="bloco-codigo">
+          <h2>Execução da FFT</h2>
+            <pre><code>FFT.Windowing(vReal, AMOSTRAS, FFT_WIN_TYP_HAMMING, FFT_FORWARD);
+              FFT.Compute(vReal, vImag, AMOSTRAS, FFT_FORWARD);
+              FFT.ComplexToMagnitude(vReal, vImag, AMOSTRAS);
+            </code></pre>
+            <p>Transforma o sinal do domínio do tempo para o domínio da frequência.</p>
+        </div>
+       
+        <div class="bloco-codigo">
+          <h2>Visualização no display</h2>
+            <pre><code>for (int c = 0; c &lt; coluna; c++) {
+              if (picos[c] &gt; 0) picos[c]--;
+              uint8_t altura = valorFinalColunas[c];
+              if (altura &gt; picos[c]) picos[c] = altura;
+              mx.setColumn(c, padraoLinhas[picos[c]]);
+              }
+            </code></pre>
+            <p>Atualiza o display de LEDs para mostrar as intensidades das frequências como barras verticais.</p>
+        </div>
+      </section>      
+
+
+      <section class="download">
+        <a href="https://github.com/seurepositorio" download class="botao-download">
+          <img src="Assets/github icone.png" alt="Ícone do GitHub" class="icone-download">
+          <span>Código completo</span>
+        </a>
+      </section>
+
+
+    </div>
+  </main>
+
+
+  <footer class="rodape" style="display: none;">
+    <p>Equipe 11 | Arduino ino | Analisador de Frequência de Áudio | SD-ADS Regular | Cesar School | 2025</p>
+  </footer>
+
+
+  <script>
+
+
+    const video = document.querySelector(".intro-matrix video");
+    const finalMsg = document.querySelector(".final-msg");
+
+
+      video.addEventListener("ended", () => {
+        finalMsg.style.display = "block";
+      });
+
+
+    document.getElementById("start-audio").addEventListener("click", function () {
+      const audio = document.getElementById("bg-music");
+
+
+      audio.play()
+        .then(() => {
+          document.querySelector(".intro-matrix").style.display = "none";
+          document.querySelector(".final-msg").style.display = "none";
+          document.querySelector("header").style.display = "block";
+          document.getElementById("conteudo").style.display = "block";
+          document.querySelector("footer.rodape").style.display = "block";
+        })
+        .catch((error) => {
+          console.log("Erro ao iniciar o áudio:", error);
+          alert("Clique para permitir o som!");
+        });
+    });
+
+
+    document.getElementById("pause-audio").addEventListener("click", () => {
+    const audio = document.getElementById("bg-music");
+    const botao = document.getElementById("pause-audio");
+
+
+    if (audio.paused) {
+        audio.play();
+        botao.textContent = "PAUSAR MÚSICA";
+    } else {
+        audio.pause();
+        botao.textContent = "RETOMAR MÚSICA";
+    }
+    });
+
+
+   </script>
+
+
+</body>
+</html>
