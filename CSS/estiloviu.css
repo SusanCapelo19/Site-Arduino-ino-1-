@@ -1,0 +1,170 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+  background-image: url('../Assets/backgroundhome.png');
+}
+
+
+/* Introdução da Viu */
+.intro-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+
+.intro-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.intro-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 500px;
+}
+
+
+.botao-iniciar {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+
+.botao-iniciar:hover {
+  background-color: #b00710;
+}
+
+
+/* Conteúdo da Descrição */
+#conteudo {
+  padding: 10px 20px;
+}
+
+
+.descricao h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.descricao p {
+  font-size: 1.2rem;
+  text-align: justify;
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px;
+}
+
+
+.passo-a-passo {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+
+.passo-a-passo h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+
+.grid-passo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+
+.passo {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+
+.passo:hover {
+  transform: translateY(-5px);
+}
+
+
+.passo img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+.passo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.passo p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+/* Vídeo YouTube */
+
+
+.video-youtube {
+  text-align: center;
+  margin: 40px auto;
+}
+
+
+.video-container {
+  position: relative;
+  width: 70%;    
+  height: 50%;    
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 50%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
