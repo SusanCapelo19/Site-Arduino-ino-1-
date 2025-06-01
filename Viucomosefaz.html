@@ -69,74 +69,52 @@
   <div class="grid-passo">
    
     <div class="passo">
-      <img src="Assets/passo_1.heic" alt="Imagem dos componentes eletrônicos">
+      <img src="Assets/passo_1.png" alt="Imagem dos componentes eletrônicos">
       <h3>Passo 1</h3>
-      <p>Separe todos os componentes eletrônicos necessários. 01 placa de Arduino Uno, 01 Breadboard, 01 Módulo de matriz de LED MAX7419, 01 Módulo de microfone MAX 4466. Jumpers. </p>
+      <p>Separe todos os componentes eletrônicos necessários. 01 placa de Arduino Uno, 01 Breadboard, 01 Módulo de matriz de LED MAX7219, 01 Módulo de microfone MAX 4466. Jumpers. </p>
     </div>
 
 
     <div class="passo">
-      <img src="Assets/passo2" alt="Imagem do passo 2">
+      <img src="Assets/passo_2.jpg" alt="Imagem da conexão do circuito da matriz de LED">
       <h3>Passo 2</h3>
-      <p>Monte o circuito na protoboard conforme o esquema.</p>
+      <p>Monte o circuito da matriz de LED para a conexão com a placa de Arduino. Primeiro conecte o VCC no slot da conexão 5v do Arduino. Depois conecte o ground da matriz de LED no ground da placa de arduino. Em seguida faça a conexão do dataIn na porta 11. O chip select vai na porta 10. E finalize com o clock na porta 13.</p>
     </div>
 
 
     <div class="passo">
-      <img src="Assets/passo3" alt="Imagem do passo 3">
+      <img src="Assets/passo_3.jpg" alt="Imagem do circuito do módulo de microfone">
       <h3>Passo 3</h3>
-      <p>Conecte o Arduino ao computador via cabo USB.</p>
+      <p>Monte o circuito do módulo do microfone. Inicie a conexão alimentando a breadbord com uma fonte de 3 volts vinda da placa de arduino. Feche o circuito conectando um cabo do ground do arduino ao trilho de alimentação negativa da breadbord. Agora conecte um cabo no AREF para servir de referência de voltagem para a conexão analógica. Só então, começamos as conexões no módulo do microfone. O out vai ser colocado na porta lógica analógica 0, ou A0, na placa arduino. O VCC vai iniciar a alimentação do microfone, deve ser ligado na linha de alimentação positiva da breadbord. E fechamos o circuito ligando o ground do microfone a linha de alimentação negativa da breadbord.</p>
     </div>
 
 
     <div class="passo">
-      <img src="Assets/passo4" alt="Imagem do passo 4">
+      <img src="Assets/passo_4.png" alt="Imagem da placa de arduino conectada com cabo USB ao computador">
       <h3>Passo 4</h3>
-      <p>Abra a IDE do Arduino e carregue o código.</p>
+      <p>Conecte o Arduino ao seu computador usando o cabo USB. O LED verde de energia (marcado como PWR) deve acender.</p>
     </div>
 
 
     <div class="passo">
-      <img src="Assets/passo5" alt="Imagem do passo 5">
+      <img src="Assets/passo_5.webp" alt="Imagem da página d IDE Arduino">
       <h3>Passo 5</h3>
-      <p>Verifique a comunicação com os sensores de som.</p>
+      <p>Configure o IDE Arduino. Você precisará selecionar a placa indo na opção do menu Ferramentas, em seguida em Placa e escolha a placa que corresponde ao seu tipo de Arduino. Depois selecione a porta serial do dispositivo correspondente à placa do Arduino, faça isso indo no menu Ferramentas e depois Porta Serial.</p>
     </div>
 
 
     <div class="passo">
-      <img src="Assets/passo6" alt="Imagem do passo 6">
+      <img src="Assets/passo_6.png" alt="Imagem da placa de LED funcinando">
       <h3>Passo 6</h3>
-      <p>Ajuste a sensibilidade dos componentes se necessário.</p>
+      <p>Por último faça o upload do programa clicando no botão "Carregar" no ambiente de desenvolvimento. Espere alguns segundos - você deve ver os Leds RX e TX na placa piscando. Se o upload for bem sucedido, a mensagem "Transferência concluída." vai aparecer na barra de status. Agora é só testar!</p>
     </div>
-
-
-    <div class="passo">
-      <img src="Assets/passo7" alt="Imagem do passo 7">
-      <h3>Passo 7</h3>
-      <p>Visualize os sinais no display de LEDs.</p>
-    </div>
-
-
-    <div class="passo">
-      <img src="Assets/passo8" alt="Imagem do passo 8">
-      <h3>Passo 8</h3>
-      <p>Teste diferentes frequências de som e veja a resposta.</p>
-    </div>
-
-
-    <div class="passo">
-      <img src="Assets/passo9" alt="Imagem do passo 9">
-      <h3>Passo 9</h3>
-      <p>Pronto! Agora você tem seu próprio analisador funcional.</p>
-    </div>
-
-
+    
   </div>
 </section>
 
 
     <section class="video-youtube">
-    <h2>Se prefirir, assista ao passo a passo no YouTube:</h2>
+    <h2>Se preferir, assista ao passo a passo no YouTube:</h2>
     <div class="video-container">
       <iframe
         width="560"
