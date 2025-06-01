@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viu, como se faz</title>
+    <link rel="stylesheet" href="CSS/estilogeral.css">
+    <link rel="stylesheet" href="CSS/estiloviu.css">
+</head>
+<body>
+
+
+      <div class="intro-video">
+          <video id="intro-video" autoplay muted>
+              <source src="Assets/capa_intro_viu.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+          </video>
+
+
+          <div class="intro-overlay">
+              <h2>Como fazer um Analisador de Frequência de Áudio?</h2>
+              <button id="start-audio" class="botao-iniciar">Vem ver como se faz</button>
+          </div>
+      </div>
+
+
+    <header style="display: none;">
+
+
+    <div class="gif-grid">
+        <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+        <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+        <img src="Assets/analisadordefrequencia.gif" alt="Analisador de Frequência"/>
+    </div>
+   
+    <div class="titulo-central">
+        <h1>Viu, como se faz</h1>        
+        <nav class="menu">
+      <ul>
+        <li><a href="Analisador.html">A Missão</a></li>
+        <li><a href="QBranch.html">Q Branch</a></li>
+        <li><a href="TheMatrix.html">The Matrix</a></li>
+        <li><a href="Viucomosefaz.html">Viu, como se faz</a></li>
+        <li><a href="Aestradaateaqui.html">A estrada até aqui</a></li>
+        <li><a href="ATrupe.html">A Trupe</a></li>
+      </ul>
+    </nav>
+    </div>
+
+
+    <div class="controle-audio">
+      <button id="pause-audio" class="botao-pausar">PAUSAR MÚSICA</button>
+    </div>
+   
+  </header>
+
+
+  <audio id="bg-music" loop>
+    <source src="Assets/audio_tem_ratimbum.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio embutido.
+  </audio>
+
+
+  <main id="conteudo" style="display: none;">
+
+
+    <section class="passo-a-passo">
+  <h2>Passo a passo para montar seu analisador</h2>
+  <div class="grid-passo">
+   
+    <div class="passo">
+      <img src="Assets/passo1" alt="Imagem do passo 1">
+      <h3>Passo 1</h3>
+      <p>Separe todos os componentes eletrônicos necessários.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo2" alt="Imagem do passo 2">
+      <h3>Passo 2</h3>
+      <p>Monte o circuito na protoboard conforme o esquema.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo3" alt="Imagem do passo 3">
+      <h3>Passo 3</h3>
+      <p>Conecte o Arduino ao computador via cabo USB.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo4" alt="Imagem do passo 4">
+      <h3>Passo 4</h3>
+      <p>Abra a IDE do Arduino e carregue o código.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo5" alt="Imagem do passo 5">
+      <h3>Passo 5</h3>
+      <p>Verifique a comunicação com os sensores de som.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo6" alt="Imagem do passo 6">
+      <h3>Passo 6</h3>
+      <p>Ajuste a sensibilidade dos componentes se necessário.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo7" alt="Imagem do passo 7">
+      <h3>Passo 7</h3>
+      <p>Visualize os sinais no display de LEDs.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo8" alt="Imagem do passo 8">
+      <h3>Passo 8</h3>
+      <p>Teste diferentes frequências de som e veja a resposta.</p>
+    </div>
+
+
+    <div class="passo">
+      <img src="Assets/passo9" alt="Imagem do passo 9">
+      <h3>Passo 9</h3>
+      <p>Pronto! Agora você tem seu próprio analisador funcional.</p>
+    </div>
+
+
+  </div>
+</section>
+
+
+    <section class="video-youtube">
+    <h2>Assista ao passo a passo no YouTube:</h2>
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+
+  </main>
+
+
+  <footer class="rodape" style="display: none;">
+    <p>Equipe 11 | Arduino ino | Analisador de Frequência de Áudio | SD-ADS Regular | Cesar School | 2025</p>
+  </footer>
+
+
+
+
+    <script>
+
+
+        document.getElementById("start-audio").addEventListener("click", () => {
+        const audio = document.getElementById("bg-music");
+
+
+        audio.play()
+            .then(() => {        
+            document.querySelector(".intro-video").style.display = "none";            
+            document.querySelector("header").style.display = "block";
+            document.getElementById("conteudo").style.display = "block";
+            document.querySelector("footer.rodape").style.display = "block";
+            })
+            .catch((err) => {
+            console.log("Erro ao iniciar áudio:", err);
+            alert("Clique para permitir o som!");
+            });
+        });
+
+
+        document.getElementById("pause-audio").addEventListener("click", () => {
+        const audio = document.getElementById("bg-music");
+        const botao = document.getElementById("pause-audio");
+
+
+        if (audio.paused) {
+            audio.play();
+            botao.textContent = "PAUSAR MÚSICA";
+        } else {
+            audio.pause();
+            botao.textContent = "RETOMAR MÚSICA";
+        }
+        });
+
+
+    </script>
+   
+</body>
+</html>
