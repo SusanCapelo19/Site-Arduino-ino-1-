@@ -144,7 +144,8 @@ body {
 
 .video-youtube {
   text-align: center;
-  margin: 40px auto;
+  margin: 50px auto;
+  font-size: 20px;
 }
 
 
@@ -159,7 +160,8 @@ body {
 .video-container iframe {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80%;
   height: 80%;
   border-radius: 12px;
