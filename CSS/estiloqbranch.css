@@ -4,7 +4,7 @@ body {
   background-image: url('../Assets/backgroundqbranch.png');
 }
 
-/* === Introdução do Q Branch === */
+/* Introdução do Q Branch */
 .intro-qbranch {
   height: 100vh;
   background-image: url('../Assets/capa_intro_qbrach.png');
@@ -41,7 +41,7 @@ body {
   background-color: #b00710;
 }
 
-/* === Conteúdo da Main === */
+/* Conteúdo da Main */
 .componentes {
     margin-top: 20px;
     margin-left: 30px;
@@ -189,4 +189,126 @@ body {
 .botao-comprar:hover {
   background-color: #494949;
   transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .intro-qbranch h2 {
+    font-size: 1.8rem;
+  }
+
+  .botao-iniciar {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .item {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-qbranch {
+    padding: 15px;
+    background-position: center top;
+  }
+
+  .intro-qbranch h2 {
+    font-size: 1.6rem;
+  }
+
+  .botao-iniciar {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .carrossel-wrapper {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .carrossel {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .carrossel-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .item {
+    min-width: 280px;
+    padding: 10px;
+  }
+
+  .item img {
+    width: 80%;
+    max-height: 120px;
+  }
+
+  .botao-mais {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  .grid-container1 {
+    padding: 20px 15px;
+  }
+
+  .grid-container1 h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .item1 {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .item1 img {
+    width: 80%;
+  }
+
+  .botao-comprar {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-qbranch h2 {
+    font-size: 1.3rem;
+  }
+
+  .botao-iniciar {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .item {
+    min-width: 240px;
+  }
+
+  .item img {
+    width: 90%;
+    max-height: 100px;
+  }
+
+  .grid1 {
+    grid-template-columns: 1fr;
+  }
+
+  .item1 {
+    padding: 10px;
+  }
+
+  .item1 img {
+    width: 100%;
+  }
+
+  .botao-comprar {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 }

@@ -134,3 +134,107 @@ body::before {
   width: 36px;
   height: 36px;
 }
+
+/* Responsividade*/
+
+@media (max-width: 1024px) {
+  .grid-trupe {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .foto,
+  .gif {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .info h2 {
+    font-size: 32px;
+  }
+
+  .info p {
+    font-size: 18px;
+  }
+
+  .links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-trupe h2 {
+    font-size: 2rem;
+  }
+
+  .botao-iniciar {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .titulo {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .info h2 {
+    font-size: 28px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .links a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .intro-trupe h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .botao-iniciar {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .info h2 {
+    font-size: 24px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .links a img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .foto,
+  .gif {
+    max-height: 250px;
+  }
+}

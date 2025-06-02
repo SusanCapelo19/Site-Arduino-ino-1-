@@ -167,3 +167,102 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+  .intro-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 300px;
+  }
+
+  .botao-iniciar {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  .descricao h2,
+  .passo-a-passo h2 {
+    font-size: 1.8rem;
+  }
+
+  .descricao p {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  .grid-passo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-overlay h2 {
+    font-size: 1.6rem;
+    margin-bottom: 200px;
+  }
+
+  .botao-iniciar {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .descricao h2,
+  .passo-a-passo h2 {
+    font-size: 1.6rem;
+  }
+
+  .descricao p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .grid-passo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .video-container iframe {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-overlay h2 {
+    font-size: 1.2rem;
+    margin-bottom: 150px;
+  }
+
+  .botao-iniciar {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .descricao h2,
+  .passo-a-passo h2 {
+    font-size: 1.4rem;
+  }
+
+  .descricao p {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .passo h3 {
+    font-size: 1rem;
+  }
+
+  .passo p {
+    font-size: 0.85rem;
+  }
+
+  .video-youtube {
+    font-size: 1rem;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

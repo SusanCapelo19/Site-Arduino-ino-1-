@@ -112,3 +112,76 @@ body::before {
   width: 24px;
   height: 24px;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .intro-home {
+    padding: 20px;
+    height: auto;
+  }
+
+  .intro-home h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .botao-iniciar {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .descricao h2 {
+    font-size: 1.6rem;
+  }
+
+  .descricao p {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .imagem-home {
+    width: 90%;
+  }
+
+  .botao-download {
+    position: static;
+    margin: 20px auto;
+    display: flex;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-home h2 {
+    font-size: 1.4rem;
+  }
+
+  .botao-iniciar {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .descricao h2 {
+    font-size: 1.4rem;
+  }
+
+  .descricao p {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .imagem-home {
+    width: 95%;
+  }
+
+  .botao-download {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .icone-download {
+    width: 20px;
+    height: 20px;
+  }
+}
