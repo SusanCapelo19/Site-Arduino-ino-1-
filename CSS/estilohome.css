@@ -16,6 +16,10 @@ body::before {
   pointer-events: none;
 }
 
+#conteudo {
+  padding-top: 30px;
+}
+
 /* Introdução da Home */
 .intro-home {
   height: 100vh;
@@ -61,12 +65,26 @@ body::before {
   margin-bottom: 20px;
 }
 
+.descricao {
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
+color: rgb(0, 0, 0);
+}
+
 .descricao p {
   font-size: 1.2rem;
   text-align: justify;
   max-width: 1300px;
   margin: auto;
   padding: 30px;
+}
+
+.palavras-chave {
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
+color: rgb(0, 0, 0);
+margin-top: 20px; 
+padding: 30px;
 }
 
 .imagem-home {
@@ -118,6 +136,12 @@ body::before {
   .intro-home {
     padding: 20px;
     height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 40px;  
+  }
+
+  #conteudo {
+    padding-top: 30px;
   }
 
   .intro-home h2 {
