@@ -38,7 +38,7 @@
         <h1>A estrada até aqui</h1>        
         <nav class="menu">
       <ul>
-        <li><a href="Analisador.html">A Missão</a></li>
+        <li><a href="index.html">A Missão</a></li>
         <li><a href="QBranch.html">Q Branch</a></li>
         <li><a href="TheMatrix.html">The Matrix</a></li>
         <li><a href="Viucomosefaz.html">Viu, como se faz</a></li>
@@ -63,45 +63,29 @@
 
 
   <main id="conteudo" style="display: none;">
-
-
     <section>
-        <h2><b>O monstros e demônios que enfrentamos</b></h2>
-        <h2><b>As lições que aprendemos no caminho</b></h2>
-    </section>
-
-    
-    <div>
-        <h3> Problemas enfrentados </h3>
-        <h4> Módulo MAX7219 </h4>
-        <p>
-        O primeiro problema que enfrentamos foi configurar o módulo MAX7219. Para manipularmos o módulo, precisamos especificar a versão do módulo. 
-        <p>
-        Quando se usa a versão errada, a orientação dos módulos fica invertida (horizontalmente, verticalmente ou espelhada nos módulos 1 e 2).
-        </p>
-        <p>
-        Sem saber nossa versão, usamos um programa da biblioteca para determinar o tipo de hardware — o programa exibe o nome de cada hardware alternando entre as versões; o nome de cada versão aparece invertido, exceto o nome do hardware do módulo sendo usado.
-        </p>
+        <h2><b>Os monstros e demônios que enfrentamos</b></h2>
+          <h4><b>Módulo MAX7219</b></h4>
+           <p>O primeiro problema que enfrentamos foi configurar o módulo MAX7219. Para manipularmos o módulo, precisamos especificar a versão do módulo.</p>
+           <p>Quando se usa a versão errada, a orientação dos módulos fica invertida (horizontalmente, verticalmente ou espelhada nos módulos 1 e 2).</p>
+           <p>Sem saber nossa versão, usamos um programa da biblioteca para determinar o tipo de hardware — o programa exibe o nome de cada hardware alternando entre as versões; o nome de cada versão aparece invertido, exceto o nome do hardware do módulo sendo usado.</p>
         
-        <h4> Microfone </h4>
-        <p>
-        O segundo problema foi com o microfone sendo usado. Planejamos usar o módulo KY 037, que tem saída digital e analógica. 
-        <p>
-        Embora o módulo tivesse um pré-amplificador, não conseguimos ajustar a sensibilidade com o trimpot para conseguirmos uma saída analógica sem ruído. 
-        </p>
-        <p>
-        Procuramos substituir o microfone pelo módulo MAX4466. Foi difícil encontrar uma chave de fenda para mexer no potenciômetro do pré-amplificador, mas conseguimos deixar numa sensibilidade apropriada.
-        </p>
-        <h4> Programa </h4>
-        <p>
-        Finalmente, o terceiro desafio foi adaptar o programa para entradas com ganho variável. Buscamos adicionar uma variável para amplificar os valores do FFT por um coeficiente que varia com a média da intensidade dos valores de uma captura de amostras.
-        </p>
-        <p>
-        Com isso, notamos que o circuito do microfone estava capturando muito ruído elétrico na faixa dos 0-100 Hz. Para resolver, adicionamos um filtro digital de high pass para filtrarmos as frequências mais graves.
-        </p>
-    </div>
-
-
+          <h4><b>Microfone</b></h4>
+            <p>O segundo problema foi com o microfone sendo usado. Planejamos usar o módulo KY 037, que tem saída digital e analógica.</p> 
+            <p>Embora o módulo tivesse um pré-amplificador, não conseguimos ajustar a sensibilidade com o trimpot para conseguirmos uma saída analógica sem ruído.</p>
+            <p>Procuramos substituir o microfone pelo módulo MAX4466. Foi difícil encontrar uma chave de fenda para mexer no potenciômetro do pré-amplificador, mas conseguimos deixar numa sensibilidade apropriada.</p>
+          
+         <h4><b>Programa</b></h4>
+            <p>Finalmente, o terceiro desafio foi adaptar o programa para entradas com ganho variável. Buscamos adicionar uma variável para amplificar os valores do FFT por um coeficiente que varia com a média da intensidade dos valores de uma captura de amostras.</p>
+            <p>Com isso, notamos que o circuito do microfone estava capturando muito ruído elétrico na faixa dos 0-100 Hz. Para resolver, adicionamos um filtro digital de high pass para filtrarmos as frequências mais graves.</p>
+        
+        <h2><b>As lições que aprendemos no caminho</b></h2>
+          <P>Cada obstáculo encontrado ao longo do desenvolvimento do nosso projeto trouxe consigo aprendizados valiosos — não apenas sobre eletrônica e programação, mas também sobre persistência, análise crítica e adaptação rápida.</P>
+          <P>Ao enfrentar o desafio com o módulo MAX7219, aprendemos a importância de compreender profundamente os componentes que utilizamos. Perceber que existem diferentes versões do mesmo hardware nos ensinou a investigar com mais calma e utilizar ferramentas de diagnóstico da própria biblioteca antes de realizar qualquer configuração. Isso reforçou nosso entendimento de como pequenas variações técnicas podem impactar diretamente no comportamento visual e funcional do sistema.</P>
+          <P>Com o problema do microfone, percebemos que nem sempre o componente inicialmente escolhido será o mais adequado. A tentativa frustrada com o KY-037 nos mostrou que especificações no papel nem sempre se traduzem em desempenho real. Ao migrarmos para o MAX4466, aprendemos na prática sobre ganho, ruído e sensibilidade — e também que, às vezes, encontrar uma simples chave de fenda pode atrasar mais do que o código. A perseverança para ajustar o novo módulo nos ensinou a lidar com limitações físicas com criatividade e calma.</P>
+          <P>Por fim, ao lidar com a adaptação do programa para diferentes níveis de entrada, ganhamos uma visão mais clara sobre o tratamento de sinais. A implementação de um coeficiente adaptativo e de um filtro digital high-pass foi um exercício prático de engenharia de software aplicada à eletrônica. Entendemos que ruídos e imperfeições fazem parte do processo e que algoritmos simples podem ser grandes aliados para suavizar esses efeitos.</P>
+          <P>Mais do que montar um circuito ou escrever um código funcional, aprendemos a aprender. E isso, com certeza, é o que mais importa.</P>
+    </section>
   </main>
 
 

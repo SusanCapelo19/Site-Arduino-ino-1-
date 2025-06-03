@@ -10,6 +10,9 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 9999;
+  padding: 0;
+  margin: 0;
   background: url('../Assets/backgroundhome.webp') center center / cover no-repeat;
   opacity: 0.3; 
   z-index: -1; 
@@ -77,6 +80,7 @@ color: rgb(0, 0, 0);
   max-width: 1300px;
   margin: auto;
   padding: 30px;
+  line-height: 1.6;
 }
 
 .palavras-chave {
@@ -90,7 +94,7 @@ padding: 30px;
 .imagem-home {
   display: block;
   margin: 20px auto;
-  max-width: 100%;
+  max-width: 90%;
   width: 500px;
   height: auto;
   border-radius: 10px;
@@ -101,6 +105,10 @@ padding: 30px;
 .download {
   position: relative;
   min-height: 100px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  padding: 20px 0; 
 }
 
 .botao-download {
@@ -135,9 +143,7 @@ padding: 30px;
 @media (max-width: 768px) {
   .intro-home {
     padding: 20px;
-    height: auto;
-    padding-bottom: 40px;
-    margin-bottom: 40px;  
+      
   }
 
   #conteudo {

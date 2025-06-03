@@ -8,12 +8,13 @@ body {
 .intro-qbranch {
   height: 100vh;
   background-image: url('../Assets/capa_intro_qbrach.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #000;
   align-items: center;
   color: #fff;
   padding: 20px;
@@ -53,15 +54,34 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0;
+}
+
+.carrossel-container {
+  margin: 20px auto; 
+  max-width: 1200px; 
+  background-color: rgba(255, 255, 255, 0.7); 
+  border-radius: 10px; 
+  padding: 1rem; 
+  box-sizing: border-box; 
 }
 
 .carrossel {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   gap: 1rem;
   padding: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+  -webkit-scrollbar {
+    display: none;
+}
 }
 
 .item {
@@ -192,25 +212,9 @@ body {
 }
 
 /* Responsividade */
-@media (max-width: 1024px) {
-  .intro-qbranch h2 {
-    font-size: 1.8rem;
-  }
-
-  .botao-iniciar {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-
-  .item {
-    min-width: 320px;
-  }
-}
-
 @media (max-width: 768px) {
   .intro-qbranch {
     padding: 15px;
-    background-position: center top;
   }
 
   .intro-qbranch h2 {
@@ -223,7 +227,7 @@ body {
   }
 
   .carrossel-wrapper {
-    flex-direction: column;
+    flex-direction: row;
     padding: 1rem 0;
   }
 
@@ -286,6 +290,13 @@ body {
     font-size: 0.9rem;
   }
 
+  .carrossel-wrapper {
+        flex-direction: row; 
+        padding: 0.2rem; 
+    }
+    .carrossel {
+        padding: 0.2rem 0; 
+        gap: 0.5rem;
   .item {
     min-width: 240px;
   }
@@ -311,4 +322,5 @@ body {
     width: 100%;
     font-size: 0.9rem;
   }
+}
 }

@@ -27,20 +27,18 @@ body::before {
 .intro-matrix video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: #000;
 }
 
 
 .intro-matrix {
   position: relative;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,12 +49,10 @@ body::before {
   overflow: hidden;
 }
 
-
 .final-msg h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
 
 .final-msg {
   position: absolute;
@@ -71,7 +67,6 @@ body::before {
   z-index: 10;
 }
 
-
 .botao-iniciar {
   padding: 15px 30px;
   font-size: 1.1rem;
@@ -84,17 +79,14 @@ body::before {
   transition: background-color 0.3s ease;
 }
 
-
 .botao-iniciar:hover {
   background-color: #b00710;
 }
-
 
 /* Conteúdo da main */
 #conteudo {
   padding: 10px 20px;
 }
-
 
 .descricao {
   padding: 2rem;
@@ -103,7 +95,6 @@ body::before {
   gap: 2rem;
 }
 
-
 .bloco-codigo {
   background-color: rgba(100, 100, 100, 0.2);
   border-radius: 12px;
@@ -111,13 +102,11 @@ body::before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-
 .bloco-codigo h2 {
   margin-top: 0;
   font-size: 1.4rem;
   color: #ffffff;
 }
-
 
 .bloco-codigo pre {
   background-color: rgba(0, 0, 0, 0.7);
@@ -130,17 +119,16 @@ body::before {
   margin: 1rem 0;
 }
 
-
 .bloco-codigo p {
   font-size: 1rem;
   color: #ffffff;
 }
+
 /* Botão de Download */
 .download {
   position: relative;
   min-height: 100px;
 }
-
 
 .botao-download {
   position: absolute;
@@ -161,17 +149,14 @@ body::before {
   gap: 10px;
 }
 
-
 .botao-download:hover {
   background-color: #b00710;
 }
-
 
 .icone-download {
   width: 36px;
   height: 36px;
 }
-
 
 /* Responsividade */
 @media (max-width: 1024px) {
@@ -179,24 +164,21 @@ body::before {
     right: 1rem;
     padding: 1rem;
     font-size: 1rem;
+    max-width: 300px;
   }
-
 
   .botao-iniciar {
     font-size: 1rem;
     padding: 12px 25px;
   }
 
-
   .bloco-codigo h2 {
     font-size: 1.2rem;
   }
 
-
   .bloco-codigo pre {
     font-size: 0.9rem;
   }
-
 
   .botao-download {
     font-size: 16px;
@@ -204,53 +186,53 @@ body::before {
     gap: 8px;
   }
 
-
   .icone-download {
     width: 28px;
     height: 28px;
   }
 }
 
-
 @media (max-width: 768px) {
   .intro-matrix {
-    padding: 10px;
+    padding: 20px;
   }
-
 
   .final-msg {
-    right: 0.5rem;
-    padding: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate();
+    padding: 0.8rem;
     font-size: 0.9rem;
+    max-width: 180px;
   }
 
-
+  .final-msg h2 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+  }
+    
   .botao-iniciar {
     font-size: 0.95rem;
-    padding: 10px 20px;
+    padding: 8px 12px;
   }
-
 
   .descricao {
     padding: 1rem;
     gap: 1.5rem;
   }
 
-
   .bloco-codigo {
     padding: 1rem;
   }
-
 
   .bloco-codigo h2 {
     font-size: 1.1rem;
   }
 
-
   .bloco-codigo pre {
     font-size: 0.85rem;
   }
-
 
   .botao-download {
     font-size: 15px;
@@ -258,19 +240,21 @@ body::before {
     gap: 6px;
   }
 
-
   .icone-download {
     width: 24px;
     height: 24px;
   }
 }
 
-
 @media (max-width: 480px) {
   .final-msg {
-    position: static;
-    transform: none;
-    margin-top: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translate();
+    padding: 0.2rem;
+    font-size: 0.3rem;
+    max-width: 180px;
   }
 
 

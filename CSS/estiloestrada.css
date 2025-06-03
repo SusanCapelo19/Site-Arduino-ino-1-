@@ -1,90 +1,191 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
-  color: #e7e7e7;
-  background-image: url('../Assets/backgroundestrada.png');
-}
-
+    font-family: 'Courier New', Courier, monospace;
+    color: #e7e7e7;
+    background-image: url('../Assets/backgroundestrada.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; }
 
 /* Introdução da Estrada */
 .intro-estrada {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 .intro-estrada video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
 }
 
-
-.intro-estrada {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
+.intro-estrada h2 { 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    max-width: 90%;
 }
-
-
-.intro-estrada h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
 
 .botao-iniciar {
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #e50914;
-  color: white;
-  cursor: pointer;
-  animation: pulse 2s infinite;
-  transition: background-color 0.3s ease;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease;
 }
-
 
 .botao-iniciar:hover {
-  background-color: #b00710;
+    background-color: #b00710;
 }
 
-
-/* Conteúdo da Descrição */
+/* Conteúdo da Main */
 #conteudo {
-  padding: 20px 40px;
+    padding: 20px 40px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding-top: 100px; 
 }
 
-#conteudo p, section, h3, h4 {
-    background-color: rgb(46, 46, 46);
-    padding: 1rem
+#conteudo section {
+    background-color: rgba(46, 46, 46, 0.6); 
+    padding: 1.5rem; 
+    margin-bottom: 20px; 
+    border-radius: 8px;
+    line-height: 1.6;
+    color: white;  
+  }
+
+#conteudo h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-.descricao h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 20px;
+#conteudo h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
+#conteudo p {
+    font-size: 1.1rem; 
+    text-align: justify;
+     margin-bottom: 1rem;
+  line-height: 1.6;
+}
 
-.descricao p {
-  font-size: 1.2rem;
-  text-align: justify;
-  max-width: 1300px;
-  margin: auto;
-  padding: 30px;
+/* Responsividade */
+
+
+@media (max-width: 1024px) {
+    .intro-estrada h2 {
+        font-size: 2rem;
+    }
+
+    #conteudo {
+        padding: 15px 30px; 
+    }
+
+    #conteudo p,
+    #conteudo section,
+    #conteudo h3,
+    #conteudo h4 {
+        padding: 1.2rem; 
+    }
+
+    #conteudo h2 {
+        font-size: 1.8rem;
+    }
+
+    #conteudo p {
+        font-size: 1rem;
+    }
+}
+
+/* Telas menores que 768px (Tablets em modo retrato e Smartphones maiores) */
+@media (max-width: 768px) {
+    .intro-estrada {
+        justify-content: flex-end; /* Move o conteúdo da intro para baixo */
+        padding-bottom: 50px; /* Adiciona padding na parte inferior */
+    }
+    
+    .intro-estrada h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px; /* Reduz margin-bottom para o botão */
+    }
+
+    .botao-iniciar {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    #conteudo {
+        padding: 10px 20px; /* Reduz padding lateral */
+    }
+
+    #conteudo h2 {
+        font-size: 1.6rem;
+    }
+
+    #conteudo p,
+    #conteudo section,
+    #conteudo h3,
+    #conteudo h4 {
+        padding: 1rem; /* Mais redução de padding interno */
+    }
+
+    #conteudo p {
+        font-size: 0.95rem; /* Leve redução para otimizar espaço */
+    }
+}
+
+/* Telas menores que 480px (Smartphones) */
+@media (max-width: 480px) {
+    .intro-estrada h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .botao-iniciar {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #conteudo {
+        padding: 10px 15px; /* Padding mínimo para as laterais */
+    }
+
+    #conteudo h2 {
+        font-size: 1.4rem;
+    }
+
+    #conteudo p,
+    #conteudo section,
+    #conteudo h3,
+    #conteudo h4 {
+        padding: 0.8rem; 
+    }
+
+    #conteudo p {
+        font-size: 0.9rem;
+    }
 }
